@@ -3,6 +3,9 @@ version: '3.8'
 services:
   ros:
     image: osrf/ros:humble-desktop
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
     volumes:
       - .:/ros_ws
       - ~/.ssh:/root/.ssh:ro
