@@ -5,6 +5,8 @@ services:
     image: osrf/ros:humble-desktop
     volumes:
       - .:/ros_ws
+      - ~/.gitconfig:/root/.gitconfig:ro
+      - ~/.ssh:/root/.ssh:ro
     working_dir: /ros_ws
     stdin_open: true
     tty: true
